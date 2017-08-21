@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 import { ManagerIndexComponent } from './manager-index/manager-index.component';
 import { ManagersComponent } from './managers.component';
 import { ManagersService } from './managers.service';
+import { ManagerShowComponent } from './manager-show/manager-show.component';
+import { ManagerEditComponent } from './manager-edit/manager-edit.component';
+import { ManagerNewComponent } from './manager-new/manager-new.component';
 
 
 @NgModule({
@@ -12,7 +15,7 @@ import { ManagersService } from './managers.service';
     CommonModule,
     RouterModule
   ],
-  declarations: [ManagersComponent, ManagerIndexComponent],
+  declarations: [ManagersComponent, ManagerIndexComponent, ManagerShowComponent, ManagerEditComponent, ManagerNewComponent],
   providers: [ManagersService]
 })
 export class ManagersModule { }
