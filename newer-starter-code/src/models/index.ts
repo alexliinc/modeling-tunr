@@ -1,7 +1,7 @@
 //Connect
 import * as Sequelize from 'sequelize';
 
-var sequelize = new Sequelize('postgres://<username>@localhost:5432/tunr_models');
+var sequelize = new Sequelize('postgres://alexli@localhost:5432/tunr_models');
 
 var Artist = sequelize.import("./artist");
 var Manager = sequelize.import("./manager");
