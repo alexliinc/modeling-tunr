@@ -11,6 +11,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
+import { FormsModule } from '@angular/forms'; //ADDED
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,8 @@ import { AboutComponent } from './about/about.component';
     ArtistsModule,
     ManagersRoutingModule,
     ManagersModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

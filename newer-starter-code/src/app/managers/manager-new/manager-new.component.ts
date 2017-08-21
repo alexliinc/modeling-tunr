@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ManagersService } from '../managers.service';
+
 
 @Component({
   selector: 'app-manager-new',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerNewComponent implements OnInit {
 
-  constructor() { }
+  newManager = <any>{}; //ADDED
+
+  constructor(private managersService :  ManagersService) 
+  { }
 
   ngOnInit() {
+
   }
+
+  saveManager(newManager){
+  	console.log("component : saving manager");
+    console.log("component :" + newManager.name);
+    console.log("component just manager :" + newManager);
+    console.log("component email :" + newManager.email);
+    this.managersService.saveManager(newManager)
+      .subscribe(response => {
+    console.log(response.json());
+    let manager = response.json();
+    window.location.href = "/managers/" + manager.id;
+    })
+  };
+
 
 }

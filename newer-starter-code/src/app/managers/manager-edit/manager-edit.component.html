@@ -1,3 +1,22 @@
-<p>
-  manager-edit works!
-</p>
+<h2>EDIT Manager</h2>
+
+<!-- <form (ngSubmit)="updateManager(updatedManager)">
+	
+</form>
+ -->
+
+ <form (ngSubmit)="updateManager(updatedManager)">
+  <label for="name">Name:</label>
+  <input name="name" [(ngModel)] = "updatedManager.name">
+
+  <label for="email">Email:</label>
+  <input email="email" [(ngModel)] = "updatedManager.email">
+
+  <label for="officeNumber">Office Number:</label>
+  <input officeNumber="officeNumber" [(ngModel)] = "updatedManager.officeNumber">
+  
+  <label for="cellNumber">Cell Number:</label>
+  <input cellNumber="cellNumber" [(ngModel)] = "updatedManager.cellNumber">
+  	
+  <input type="submit" value="Update">	
+</form>

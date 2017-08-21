@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manager-show.component.css']
 })
 export class ManagerShowComponent implements OnInit {
+  
+  oneManager;
 
   constructor() { }
 

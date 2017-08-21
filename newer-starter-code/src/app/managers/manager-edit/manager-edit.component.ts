@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ManagersService } from '../managers.service';
+import { ActivatedRoute }   from '@angular/router';
 
 @Component({
   selector: 'app-manager-edit',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerEditComponent implements OnInit {
 
-  constructor() { }
+  updatedManager = <any>{};
+
+  constructor(
+    
+  ) { }
 
   ngOnInit() {
+  }
+
+  updateManager(updatedManager){
+  	console.log("compenet: updating manager");
   }
 
 }
